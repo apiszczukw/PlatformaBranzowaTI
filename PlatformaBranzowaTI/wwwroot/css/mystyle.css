@@ -1,20 +1,39 @@
-﻿:root {
+﻿@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Rajdhani:wght@300;400;500;600;700&family=Uncial+Antiqua&display=swap');
+
+
+
+:root {
     --primary-100: #c8e6c9;
-    --primary-200: #a5d6a7; 
-    --primary-300: #81c784; 
-    --primary-400: #66bb6a; 
-    --primary-500: #4caf50; 
-    --primary-600: #43a047; 
-    --primary-700: #388e3c; 
-    --primary-800: #2e7d32; 
+    --primary-200: #a5d6a7;
+    --primary-300: #81c784;
+    --primary-400: #66bb6a;
+    --primary-500: #4caf50;
+    --primary-600: #43a047;
+    --primary-700: #388e3c;
+    --primary-800: #2e7d32;
     --primary-900: #1b5e20;
 
-
+    /* zmienne dla kolorów */
     --font-color: var(--primary-800);
     --background-color: var(--primary-100);
+
+    /* zmienne dla czcionek */
+    --body-font: "Rajdhani", sans-serif;
+    --header-font: "Uncial Antiqua", system-ui;
+    --special-font: "Hanalei Fill", system-ui;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--font-color);
+    font-family: var(--body-font);
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--header-font);
+}
+
+.special {
+    font-family: var(--special-font);
 }
