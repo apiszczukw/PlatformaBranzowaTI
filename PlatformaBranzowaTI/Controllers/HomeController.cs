@@ -18,7 +18,22 @@ namespace PlatformaBranzowaTI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult MapaSektorow()
+        {
+            return View();
+        }
+
+        public IActionResult Raporty()
+        {
+            return View();
+        }
+
+        public IActionResult DaneHistoryczne()
+        {
+            return View();
+        }
+
+        public IActionResult Pogoda()
         {
             return View();
         }

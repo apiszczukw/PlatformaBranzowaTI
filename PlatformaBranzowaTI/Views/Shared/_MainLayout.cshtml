@@ -1,16 +1,37 @@
 ﻿<!DOCTYPE html>
-    <html>
-    <head>
-        <title>@ViewData["Title"] - Platforma Branżowa</title>
-	    <link href="~/css/mystyle.css" rel="stylesheet" />
-        
-	    <link href="~/lib/fontawesome-free-7.1.0-web/css/all.min.css" rel="stylesheet" />
-    </head>
-    <body>
-	    <img height="200px" src="~/pic/logo.png" />
-        <main>
-	        @RenderBody()
-        </main>
-        <i style="color: red; font-size: 30px;" class="fa-solid fa-toilet-paper"></i>
-    </body>
-    </html>
+<html>
+<head>
+	<title>@ViewData["Title"] - Platforma Branżowa</title>
+	<link href="~/css/mystyle.css" rel="stylesheet" />
+
+	<link href="~/lib/fontawesome-free-7.1.0-web/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+
+	<nav class="nav-bar">
+		<div class="nav-center">
+			<div class="nav-header">
+				<a href="@Url.Action("Index", "Home")" class="nav-logo"><img src="~/pic/logo.png" /></a>
+				<button type="button" class="nav-btn app-btn">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+			</div>
+			<div class="nav-links">
+				<a href="@Url.Action("Index", "Home")" class="nav-link">Home</a>
+				<a href="@Url.Action("MapaSektorow", "Home")" class="nav-link">Mapa sektorów</a>
+				<a href="@Url.Action("Raporty", "Home")" class="nav-link">Raporty</a>
+				<a href="@Url.Action("DaneHistoryczne", "Home")" class="nav-link">Dane historyczne</a>
+				<div class="nav-link weather-link">
+					<a href="@Url.Action("Pogoda", "Home")" class="app-btn">Pogoda</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		@RenderBody()
+	</main>
+	<i style="color: red; font-size: 30px;" class="fa-solid fa-toilet-paper"></i>
+</body>
+</html>
