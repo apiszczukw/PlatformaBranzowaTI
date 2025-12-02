@@ -7,13 +7,11 @@
 	<link href="~/lib/fontawesome-free-7.1.0-web/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-
-
 	<nav class="nav-bar">
 		<div class="nav-center">
 			<div class="nav-header">
 				<a href="@Url.Action("Index", "Home")" class="nav-logo"><img src="~/pic/logo.png" /></a>
-				<button type="button" class="nav-btn app-btn">
+				<button type="button" class="nav-btn app-btn" onclick="Show()">
 					<i class="fa-solid fa-bars"></i>
 				</button>
 			</div>
@@ -33,5 +31,8 @@
 		@RenderBody()
 	</main>
 	<i style="color: red; font-size: 30px;" class="fa-solid fa-toilet-paper"></i>
+
+
+	<script src="~/js/site.js"></script>
 </body>
 </html>
