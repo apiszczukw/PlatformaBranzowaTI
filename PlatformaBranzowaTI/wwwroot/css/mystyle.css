@@ -32,6 +32,7 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--header-font);
+    margin: 0;
 }
 
 .special {
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5 {
 .nav-center {
    
     width: 80vw;
-    
+    height: 6rem;
 }
 
 .nav-header {
@@ -107,4 +108,71 @@ h1, h2, h3, h4, h5 {
 .nav-link:hover {
     color: var(--primary-300);
     font-size: 1.3rem;
+}
+
+
+/* Menu na szerokie ekrany */
+@media screen and (min-width: 992px)
+{
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-links {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+
+        max-width: 1200px;
+    }
+
+    .nav-link {
+        border-top: none;
+        margin-right: 2rem;
+        padding: 0;
+    }
+
+    .weather-link {
+        margin-right: 0;
+        margin-left: auto;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .nav-header {
+        margin-right: 2.5rem;
+    }
+}
+
+
+
+.main-page {
+    width: 80vw;
+
+    margin: 0 auto;
+    max-width: 1200px;
+
+    min-height: calc(100vh - 11rem);
+}
+
+/* Sekcja stopki */
+.footer-page {
+    height: 5rem;
+    background-color: black;
+    color: var(--primary-100);
+    font-family: var(--header-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+#name {
+    color: var(--primary-400);
 }
