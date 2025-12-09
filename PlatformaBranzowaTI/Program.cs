@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using PlatformaBranzowaTI.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<SensorsContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb")));
+
+
 
 var app = builder.Build();
 

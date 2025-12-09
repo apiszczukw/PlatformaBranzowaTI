@@ -176,3 +176,35 @@ h1, h2, h3, h4, h5 {
 #name {
     color: var(--primary-400);
 }
+
+/* stylowanie Dane historyczne */
+.reports {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.report-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem;
+}
+
+.report {
+    flex: 1;
+}
+
+.report-title {
+    margin-top: 1.5rem;
+}
+
+.report-tags > b {
+    margin-right: 2rem;
+    font-size: 1.1rem;
+}
+
+.report-desc {
+    padding: 0 1.5rem;
+}
