@@ -1,16 +1,17 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using PlatformaBranzowaTI.DAL;
 using PlatformaBranzowaTI.Models;
 
 namespace PlatformaBranzowaTI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        SensorsContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(SensorsContext db)
         {
-            _logger = logger;
+            this.db = db;
         }
 
         public IActionResult Index()
@@ -25,7 +26,9 @@ namespace PlatformaBranzowaTI.Controllers
 
         public IActionResult Raporty()
         {
-            return View();
+            var dane = db.SensorReports.ToList();
+
+            return View(dane);
         }
 
         public IActionResult DaneHistoryczne()

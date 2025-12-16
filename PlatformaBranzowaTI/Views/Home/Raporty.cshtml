@@ -1,5 +1,36 @@
-﻿@{
+﻿@model IEnumerable<SensorReport>
+
+@{
 	ViewData["Title"] = "Raporty";
 }
 
+@section Biblioteki {
+
+	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+}
+
 <h1>Raporty</h1>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Data</th>
+			<th>Temperatura</th>
+			<th>Wilgotność</th>
+			<th>Notatki</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var sensor in Model)
+		{
+			<tr>
+				<td>@sensor.Id</td>
+				<td>@sensor.Timestamp</td>
+				<td>@sensor.Temperature</td>
+				<td>@sensor.Humidity</td>
+				<td>@sensor.Notes</td>
+			</tr>
+		}
+	</tbody>
+</table>
