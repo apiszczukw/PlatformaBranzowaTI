@@ -23,6 +23,6 @@ namespace PlatformaBranzowaTI.Models
         [Required]
         public double Humidity { get; set; }
 
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
     }
 }
